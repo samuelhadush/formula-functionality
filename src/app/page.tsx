@@ -132,6 +132,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
 
       <div className="relative flex flex-col  expence-search-container">
+        <h1 className="text-white italic">Dev: Samuel Hadush <br/>Email: samuelhadush@gmail.com </h1> <br/>
         <p className="text-white italic">Hint: use SPACE to separet operators ( +, -, *, / et... ) </p> <br/>
         <div className=" bg-white flex w-full items-center flex-wrap p-1 border-[1px] border-solid rounded-2xl border-[#ccc] expence-search-input">
 
