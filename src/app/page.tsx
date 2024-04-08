@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import axios from 'axios';
-import { v4 as uuidv4 } from 'uuid';
+// import { v4 as uuidv4 } from 'uuid';
 import * as math from 'mathjs'
 
 import Pill from "./components";
@@ -116,8 +116,9 @@ export default function Home() {
       e.key === " " 
     ) {
       console.log( e.target.value)
-      const uid=uuidv4()
-      handleSelectFormula({name:'', value: e.target.value, id:uid});
+      // const uid=uuidv4()
+      const uid=Math.floor(Math.random() * 100);
+      handleSelectFormula({name:'', value: e.target.value, id:uid.toString()});
     }
   };
 
@@ -129,7 +130,9 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
+
       <div className="relative flex flex-col  expence-search-container">
+        <p className="text-white italic">Hint: use SPACE to separet operators ( +, -, *, / et... ) </p> <br/>
         <div className=" bg-white flex w-full items-center flex-wrap p-1 border-[1px] border-solid rounded-2xl border-[#ccc] expence-search-input">
 
           {/* Pills */}
